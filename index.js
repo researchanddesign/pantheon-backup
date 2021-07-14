@@ -31,7 +31,7 @@ const datesToDelete = gfs.toDelete(dates, {
 });
 
 console.log('Grabbing new backup from Pantheon.')
-execSync(`./backup.sh -u ${settings.pantheonEmail} -s ${settings.pantheonSite} -e ${settings.pantheonEnv} -d ${settings.backupDirectory}`);
+execSync(`${__dirname}/backup.sh -u ${settings.pantheonEmail} -s ${settings.pantheonSite} -e ${settings.pantheonEnv} -d ${settings.backupDirectory}`);
 console.log('Finished most recent Pantheon backup.');
 
 console.log('Removing out of date backups.');
